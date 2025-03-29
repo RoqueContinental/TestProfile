@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Presentación - Cyberpunk Style</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', monospace;
+            background: #0d0d0d;
+            color: #00ffcc;
+            overflow-x: hidden;
+        }
+
+        /* Fondo cyberpunk con efecto glitch */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1a0033, #000033);
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .glitch {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/5k5e5gL.gif') repeat;
+            opacity: 0.1;
+            animation: glitch-anim 3s infinite;
+        }
+
+        @keyframes glitch-anim {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 20px #ff00ff;
+        }
+
+        .profile-pic {
+            width:360px;
+            height: 760px;
+            border-radius: 50%;
+            border: 3px solid #00ffcc;
+            margin: 0 auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+            animation: neon 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes neon {
+            from { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+            to { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; }
+        }
+
+        p {
+            line-height: 1.6;
+            text-shadow: 0 0 5px #00ffcc;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            object-fit: cover;
+            border: 2px solid #00ffcc;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #00ffcc;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="glitch"></div>
+    </div>
+
+    <div class="container">
+        <h1>¡Hola, soy Gabriel Saúl!</h1>
+        <img src="img/perfil.png" alt="Foto personal" class="profile-pic">
+        
+        <p>
+            Nombre: Gabriel Saúl Roque Aysa<br>
+            Edad: 24<br>
+            Ubicación: Cusco , Perú<br>
+            Carrera: Ingeniería de Sistema e Informática<br>
+            Sobre mí: Entre mis hobbies estan los videojuegos, viajes al campo y escuchar música.
+        </p>
+
+        <div class="gallery">
+            <img src="img/img1.png" alt="Foto 1">
+            <img src="img/img2.png" alt="Foto 2">
+            <img src="img/img3.png" alt="Foto 3">
+        </div>
+    </div>
+</body>
+</html>
